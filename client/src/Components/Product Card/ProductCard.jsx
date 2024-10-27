@@ -4,6 +4,8 @@ import './Responsive.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../../context/store'; // Import auth context for token
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 
 function ProductCard() {
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ function ProductCard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.BACKEND_URL}/api/user/allProduct`); // Adjust the endpoint to match your backend
+        const response = await axios.get(`${BACKEND_URL}/api/user/allProduct`); // Adjust the endpoint to match your backend
         setProducts(response.data); // Assuming the response contains the array of products
       } catch (error) {
         console.error("Error fetching product data:", error);
