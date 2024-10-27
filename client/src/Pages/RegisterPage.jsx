@@ -7,7 +7,7 @@ function RegisterPage() {
   return (
     <div>
       <Navbar/>
-      <CreateAccount/>
+      <h1>regristration</h1>
       <BottomBar/>
 
     </div>
