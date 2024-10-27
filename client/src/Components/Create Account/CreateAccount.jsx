@@ -96,9 +96,9 @@ function CreateAccount() {
           <div>
             <h6 className="login-font mt-2">
               Already have an account?{' '}
-              <a href="#" onClick={() => navigate('/login')} className="register-here">
+              <span onClick={() => navigate('/login')} className="register-here">
                 Login here
-              </a>
+              </span>
             </h6>
           </div>
         </div>
