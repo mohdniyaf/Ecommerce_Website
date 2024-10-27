@@ -7,12 +7,11 @@ function RegisterPage() {
   return (
     <div>
       <Navbar/>
-      <h1>regristration</h1>
-      <h1>page</h1>
+      <CreateAccount/>
       <BottomBar/>
 
     </div>
   )
 }
 
-export default RegisterPage;
+export default RegisterPage
