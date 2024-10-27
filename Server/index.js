@@ -11,7 +11,7 @@ const cors = require('cors');
 connectDB();
 
 const corsOption = {
-  origin:  process.env.FRONTEND_URL,
+  origin:  "https://ecommerce-website-frontend-e4t8.onrender.com",
   methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
   credentials: true,
 };
