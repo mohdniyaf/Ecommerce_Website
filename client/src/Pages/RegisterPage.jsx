@@ -8,6 +8,7 @@ function RegisterPage() {
     <div>
       <Navbar/>
       <h1>regristration</h1>
+      <h1>page</h1>
       <BottomBar/>
 
     </div>
