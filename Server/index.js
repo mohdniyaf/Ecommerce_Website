@@ -9,7 +9,7 @@ const cors = require('cors');
 connectDB();
 
 const corsOption = {
-  origin: "http://localhost:5173",
+  origin: process.env.FRONTEND_URL,
   methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
   credentials: true,
 };
