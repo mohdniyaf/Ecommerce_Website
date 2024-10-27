@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Home from './Pages/Home'
 import './App.css'
-import { Routes, Route} from "react-router-dom";
+import {  BrowserRouter as Router,Routes, Route} from "react-router-dom";
 import Category from './Pages/Category';
 import Login from './Pages/Login';
 import RegisterPage from './Pages/RegisterPage';
@@ -15,22 +15,19 @@ import AdminOrders from './Pages/AdminOrders';
 function App() {
 
   return (
-    <>
+  
 <Routes>
      <Route path="/" element={<Home />} />
      <Route path="category/:id" element={<Category />} />
      <Route path="cart" element={<Cart />} />
      <Route path="orders" element={<Orders />} />
      <Route path="/login" element={<Login />} />
-     <Route path="/register" element={<RegisterPage />} />
+     <Route path="/signup" element={<RegisterPage />} />
      <Route path="admin/addProduct" element={<AddProduct />} />
      <Route path="admin/createProduct" element={<CreateProduct />} />
      <Route path="admin/allOrders" element={<AdminOrders />} />
-
-
-
 </Routes>
-  </>
+
   )
 }
 
