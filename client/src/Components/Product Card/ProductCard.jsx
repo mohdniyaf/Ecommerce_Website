@@ -14,6 +14,7 @@ function ProductCard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
         const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/allProduct`); // Adjust the endpoint to match your backend
         setProducts(response.data); // Assuming the response contains the array of products
       } catch (error) {
