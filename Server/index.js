@@ -11,7 +11,7 @@ const cors = require('cors');
 connectDB();
 
 const corsOption = {
-  origin:  `${process.env.FRONTEND_URL}`,
+  origin:  process.env.FRONTEND_URL,
   methods: "GET,POST,PUT,DELETE,PATCH,HEAD",
   credentials: true,
 };
