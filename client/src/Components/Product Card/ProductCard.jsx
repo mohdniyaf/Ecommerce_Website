@@ -16,7 +16,7 @@ function ProductCard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`${BACKEND_URL}/api/user/allProduct`); // Adjust the endpoint to match your backend
+        const response = await axios.get('https://ecommerce-website-danz.onrender.com/api/user/allProduct'); // Adjust the endpoint to match your backend
         setProducts(response.data); // Assuming the response contains the array of products
       } catch (error) {
         console.error("Error fetching product data:", error);
