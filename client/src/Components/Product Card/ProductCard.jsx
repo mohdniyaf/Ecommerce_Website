@@ -4,8 +4,6 @@ import './Responsive.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../../context/store'; // Import auth context for token
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-
 
 function ProductCard() {
   const navigate = useNavigate();
@@ -16,7 +14,7 @@ function ProductCard() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://ecommerce-website-danz.onrender.com/api/user/allProduct'); // Adjust the endpoint to match your backend
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/allProduct`); // Adjust the endpoint to match your backend
         setProducts(response.data); // Assuming the response contains the array of products
       } catch (error) {
         console.error("Error fetching product data:", error);
@@ -29,7 +27,7 @@ function ProductCard() {
   // Function to handle adding product to cart
   const addToCart = async (id,quantity) => {
     try {
-      await axios.post(`${import.meta.env.BACKEND_URL}/api/user/addCart`, 
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/addCart`, 
         { productId: id, quantity }, 
         {
           headers: {

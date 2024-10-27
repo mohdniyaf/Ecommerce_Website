@@ -22,7 +22,7 @@ function CreateAccount() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${import.meta.env.BACKEND_URL}/api/user/signup`, formData);
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/signup`, formData);
       console.log('Account created successfully:', response.data);
       navigate('/login'); // Redirect to login page on success
     } catch (error) {

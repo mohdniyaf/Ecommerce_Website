@@ -22,7 +22,7 @@ function ProductView() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.BACKEND_URL}/api/user/productSinglePage/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/productSinglePage/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error("Error fetching product details:", error);
@@ -36,7 +36,7 @@ function ProductView() {
   const addToCart = async () => {
     try {
       await axios.post(
-        `${import.meta.env.BACKEND_URL}/api/user/addCart`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/user/addCart`,
         { productId: id, quantity }, // Adjust the payload if needed
         {
           headers: {

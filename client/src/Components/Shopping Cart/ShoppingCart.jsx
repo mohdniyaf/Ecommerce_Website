@@ -11,7 +11,7 @@ function ShoppingCart() {
   // Fetch cart items function
   const fetchCartItems = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.BACKEND_URL}/api/user/cart`, {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/cart`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -30,7 +30,7 @@ function ShoppingCart() {
   // Remove item from cart
   const removeFromCart = async (productId) => {
     try {
-      await axios.delete(`${import.meta.env.BACKEND_URL}/api/user/deleteCart/${productId}`, {
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/user/deleteCart/${productId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

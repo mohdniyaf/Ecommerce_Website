@@ -15,7 +15,7 @@ function SignIn() {
     e.preventDefault();
     
     try {
-      const response = await axios.post(`${import.meta.env.BACKEND_URL}/api/user/login`, { email, password });
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/login`, { email, password });
       if (response.data) {
         const data = response.data;
         console.log("data from server", data);
